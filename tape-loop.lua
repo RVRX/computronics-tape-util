@@ -46,7 +46,7 @@ local function findTapeEnd( ... )
 		tape.seek(accuracy) --seek forward one unit (One takes too long, bigger values not as accurate)
 		if tape.read() ~= 0 then --if current location is not a zero
 			runningEnd = i*accuracy --Update Running runningEnd var. i * accuracy gets current location in tape
-			print("End Candidate: " .. runningEnd)
+			--print("End Candidate: " .. runningEnd)
 		elseif seekNCheckMultiple() then --check a few spots away to see if zero as well
 			return runningEnd
 		--else return runningEnd --otherwise, (if 0) return runningEnd
@@ -67,7 +67,9 @@ local function looper( ... )
 	while true do
 		tape.seek(-tape.getSize())
 		tape.play()
+		print("... Playing")
 		sleep(endLoc/6000)
+		print("Song Ended, Restarting...")
 	end
 
 	--play tape until 
@@ -84,6 +86,6 @@ A 6 minute tape is 2,160,000 units
 
 Therefore, 1 second is 6000 UNITS
 
-add a config file for know cassettes
+add a config file for known cassettes
 
 ]]
