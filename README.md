@@ -10,7 +10,7 @@ Copy [tape-dl.lua](https://raw.githubusercontent.com/RVRX/computronics-tape-util
 then **navigate to a floppy disk (still debugging if this is necessary)**, and enter:  
 
 ``pastebin get [pastebin url] tape-util``, to download the program.  
-Or Alternatively, 
+Or Alternatively,   
 ``wget https://raw.githubusercontent.com/RVRX/computronics-tape-util/master/tape-util.lua ./tape-util``
 ## Usage
 general usage can be seen by typing ``tape-util``
