@@ -14,7 +14,7 @@ Or Alternatively,
 ``wget https://raw.githubusercontent.com/RVRX/computronics-tape-util/master/tape-util.lua ./tape-util``
 ## Usage
 general usage can be seen by typing ``tape-util``
-### Downloader
+### Downloader Utility
 Downloads multiple tracks from a web directory and writes them to the cassette. The Intention is to have the tracks be just big enough to fit on the CC machine.
 <details>
 	<summary>Click for further details</summary>
@@ -41,7 +41,7 @@ Run the Program with
 
 *Try running this example to see it in action: ``tape-util dl 5 https://raw.githubusercontent.com/RVRX/computronics-tape-util/master/example-files/``*. [Song Credits](https://www.youtube.com/watch?v=O2BzStwbeQw)
 
-### Song Looper
+### Song Looper Utility
 The song looper utility searches your cassette for the end of the song, then loops only up until that point, thereby skipping any dead/unwritten space at the end of a cassette.
 <details>
 	<summary>Click for further details</summary>
