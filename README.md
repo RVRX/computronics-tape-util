@@ -25,7 +25,7 @@ Downloads multiple tracks from a web directory and writes them to the cassette. 
 	   4. repeat.
 </details> 
 
-#### setup/prerequisites
+#### Setup/Prerequisites
 In either order:  
 * Convert music file to .wav (I used [LameXP](https://github.com/lordmulder/LameXP)).
 * Split into 1 minute pieces (I used [mp3splt-gtk](http://mp3splt.sourceforge.net/mp3splt_page/home.php) [but requires splitting before .wav convert]).  
@@ -34,10 +34,12 @@ Then, Use [LionRay](https://github.com/gamax92/LionRay) to convert those to .dfp
 (Note: LionRay doesn't appear to have any batch converting, must be done one-by-one). Name them "1.dfpwm", "2.dfpwm", etc..
 Upload segments somewhere with direct file downloading/access (I used my web server).
 
-#### running
+#### Running
 
 Run the Program with
 ``tape-util dl [# files] [Directory URL]``. Directory URL must contain the ending forward-slash.   
+
+*Try running this example to see it in action: ``tape-util dl 5 https://raw.githubusercontent.com/RVRX/computronics-tape-util/master/example-files/``*. [Song Credits](https://www.youtube.com/watch?v=O2BzStwbeQw)
 
 ### Song Looper
 The song looper utility searches your cassette for the end of the song, then loops only up until that point, thereby skipping any dead/unwritten space at the end of a cassette.
@@ -47,7 +49,7 @@ The song looper utility searches your cassette for the end of the song, then loo
 	The Loop is simple, and just rewinds, starts, then sleeps for the track lengths amount of time. On wake, it repeats this. It saves the end location, so it does not need to search again. I might make a config file that will save it between program instances/runs in the future.
 </details>   
 
-#### running
+#### Running
 ``tape-util loop``
 
 
