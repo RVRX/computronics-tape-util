@@ -1,7 +1,27 @@
 --WIP, copy functionality between two cassette tapes.--
+--NOT FUNCTIONAL, THIS IS A WORK IN PROGRESS--
 
 local tape1, tape2 = peripheral.find("tape_drive") --get both
-print("Found " .. tape1.getLabel() .. "(" .. tape1.getSize() .. ")" .. " and " .. tape2.getLabel() .. " (" .. tape2.getSize() .. ")")
+
+--display findings
+write("Found ")
+
+	--tape 1
+if tape1.getLabel() ~= nil then
+	write(tape1.getLabel)
+else write("unnamed tape")
+end
+write(" (" .. tape1.getSize() .. ")")
+
+write(" AND ")
+
+	--tape 2
+if tape2.getLabel() ~= nil then
+	write(tape2.getLabel)
+else write("unnamed tape")
+end
+write(" (" .. tape2.getSize() .. ")")
+write("\n")
 
 
 -- Scan in user input
@@ -22,7 +42,7 @@ local function copyTape(selectedTape)
 	local smallest = nil
 	if tape1.getSize() > tape2.getSize() then
 		smallest = tape2.getSize()
-		else smallest = tape2.getSize
+	else smallest = tape2.getSize
 	end
 
 	local copyContent = nil
@@ -36,14 +56,15 @@ local function copyTape(selectedTape)
 			tape1.seek(1)
 			tape2.seek(1)
 		end
-
-		elseif tonumber(selectedTape) == 2 then --copy from tape 2 to tape 1
-			for i=1,smallest do
-				tape1.write(tape2.read()) --read/write
-				--seek to next byte
-				tape1.seek(1)
-				tape2.seek(1)
-		else
+	elseif tonumber(selectedTape) == 2 then --copy from tape 2 to tape 1
+		for i=1,smallest do
+			tape1.write(tape2.read()) --read/write
+			--seek to next byte
+			tape1.seek(1)
+			tape2.seek(1)
+		end
+	else
+		return error
 	end
 end
 
