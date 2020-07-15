@@ -2,7 +2,7 @@
 For the Minecraft mod, [Computronics](https://wiki.vexatos.com/wiki:computronics) (a [ComputerCraft](https://www.computercraft.info/) addon). 
 A group of utilites for Computronics Cassette Tapes, with focus on utilites that work on Minecraft servers.  
 Current Included Utilities are:   
-* Download tutility for writing batches of files to a single cassette,
+* Download utility for writing batches of files to a single cassette,
 * Looping a cassette from start to finish of song (not entire cassette), with automatic detection for song ending.
 
 ## Getting the Program On Your CC Computer
