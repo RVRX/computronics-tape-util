@@ -1,9 +1,9 @@
 # A Computronics Cassette Tape Utility (for server players)
 For the Minecraft mod, Computronics/CC:Tweaked. 
-An easy* way to write longer songs onto a computronics cassette on MC servers (and possibly locally).
-
-\**Yes, you do still have to yt-2-mp3 them, split them to 1-min chunks, convert them to .wav, convert to .dfpwm, upload them. 
-I'm simply too far in now to google if there is anyother way to do this.*
+A group of utilites for Computronics Cassette Tapes, with focus on utilites that work on Minecraft servers.  
+Current Included Utilities are:   
+* Download tutility for writing batches of files to a single cassette,
+* Looping a cassette from start to finish of song (not entire cassette), with automatic detection for song ending.
 
 ## Getting the Program On Your CC Computer
 Copy [tape-dl.lua](#) code to pastebin, 
@@ -59,4 +59,5 @@ looper(), could do with some cleaner prints. can screen be cleared?
 Planned Additions:  
 looper(), needs accuracy argument! will be very slow on larger cassettes to find length. This would allow you to say how accurate you want to be with your initial search for the end of the track.  
 looper(), could do with an argument where the user can specify the end of the track manually for know song lengths.  
-looper(), make a save to config option that would allow you to save the track endings for labeled cassettes, so that the program can be restarted with no initilizing required.
+looper(), make a save to config option that would allow you to save the track endings for labeled cassettes, so that the program can be restarted with no initilizing required.   
+Maybe make a quicker algo for finding song end. Thinking of maybe doing half-splices, and looking forward if not at end, looking back if past end. Or maybe some actual search algo.
