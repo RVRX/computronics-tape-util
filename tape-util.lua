@@ -122,6 +122,7 @@ end
 
 
 --START TAPE DL CONTENT--------------------------------
+--Credit to the writers of Computronics for the bulk of wrtieTapeModified() function, see README for more info.
 local function writeTapeModified(relPath)
 	--check for tape drive
 	local tape = peripheral.find("tape_drive")
