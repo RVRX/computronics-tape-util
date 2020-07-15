@@ -57,6 +57,7 @@ tape-util dl, does not rewind at start.
 tape-util dl, should say when it rewinds at end, that the program is finished.  
 findTapeEnd, timeout protection might not be necessary anymore, adding bloat.  
 looper(), could do with some cleaner prints. can screen be cleared?  
+tape-util dl, doesnt check for length, so see if track will fit onto tape, will just keep overwriting
 
 Planned Additions:  
 looper(), needs accuracy argument! will be very slow on larger cassettes to find length. This would allow you to say how accurate you want to be with your initial search for the end of the track.  
