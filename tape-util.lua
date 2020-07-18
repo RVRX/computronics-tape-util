@@ -201,9 +201,9 @@ local function tapeDl(numParts,url)
 
 	--Main Loop
 	while i <= tonumber(numParts) do
-		shell.run("wget", "" .. url .. i .. ".dfpwm", "../temp_dl.dfpwm") --wget file
-		writeTapeModified("../temp_dl.dfpwm") --write to tape
-		shell.run("rm", "../temp_dl.dfpwm") -- rm temp file
+		shell.run("wget", "" .. url .. i .. ".dfpwm", "/tmp/temp_dl.dfpwm") --wget file
+		writeTapeModified("/tmp/temp_dl.dfpwm") --write to tape
+		shell.run("rm", "/tmp/temp_dl.dfpwm") -- rm temp file
 		i = i + 1 -- i++
 	end
 	tape.seek(-tape.getSize()) --rewind tape
