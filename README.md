@@ -6,8 +6,7 @@ Current Included Utilities are:
 * Looping a cassette from start to finish of song (not entire cassette), with automatic detection for song ending.
 
 ## Getting the Program On Your CC Computer
-Copy [tape-dl.lua](https://raw.githubusercontent.com/RVRX/computronics-tape-util/master/tape-util.lua) code to pastebin, 
-then **navigate to a floppy disk (still debugging if this is necessary)**, and enter:  
+Copy [tape-dl.lua](https://raw.githubusercontent.com/RVRX/computronics-tape-util/master/tape-util.lua) code to pastebin, and enter:  
 
 ``pastebin get [pastebin url] tape-util``, to download the program.  
 Or Alternatively,   
